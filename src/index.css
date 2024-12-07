@@ -12,30 +12,28 @@ body {
 }
 
 .loader {
-  border: 24px solid;
-  border-color: rgba(255, 255, 255, 0.15) rgba(255, 255, 255, 0.25)
-    rgba(255, 255, 255, 0.35) rgba(255, 255, 255, 0.5);
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  display: inline-block;
+  display: block;
+  margin: 15px auto;
+  position: relative;
+  color: #fff;
   box-sizing: border-box;
-  animation: animloader 1s linear infinite;
+  animation: animloader 1s linear infinite alternate;
 }
 
 @keyframes animloader {
   0% {
-    border-color: rgba(255, 255, 255, 0.15) rgba(255, 255, 255, 0.25)
-      rgba(255, 255, 255, 0.35) rgba(255, 255, 255, 0.75);
+    box-shadow: -38px -6px, -14px 6px, 14px -6px;
   }
   33% {
-    border-color: rgba(255, 255, 255, 0.75) rgba(255, 255, 255, 0.15)
-      rgba(255, 255, 255, 0.25) rgba(255, 255, 255, 0.35);
+    box-shadow: -38px 6px, -14px -6px, 14px 6px;
   }
   66% {
-    border-color: rgba(255, 255, 255, 0.35) rgba(255, 255, 255, 0.75)
-      rgba(255, 255, 255, 0.15) rgba(255, 255, 255, 0.25);
+    box-shadow: -38px -6px, -14px 6px, 14px -6px;
   }
   100% {
-    border-color: rgba(255, 255, 255, 0.25) rgba(255, 255, 255, 0.35)
-      rgba(255, 255, 255, 0.75) rgba(255, 255, 255, 0.15);
+    box-shadow: -38px 6px, -14px -6px, 14px 6px;
   }
 }
